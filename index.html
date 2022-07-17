@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Message</title>
+
+    <link rel="icon" type="image/png" href="./image/shield-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="intro-container">
+        <img src="./image/security.png" alt="">
+    </div>
+
+    <div class="title">
+        <div class="titlet">CipherX</div>
+        <img src="./image/shield.png" alt="CipherX">
+    </div>
+    
+    <div class="container">
+        <div class="tab-wrapper">
+            <div id="encryption-tab" class="tab" onclick="openContent(event,'area')">
+                <img src="./image/95-locked-before.svg" alt="Encryption">
+                Encryption
+            </div>
+            <div id="decryption-tab" class="tab" onclick="openContent(event,'area2')">
+                <img src="./image/96-unlocked-before.svg" alt="Decryption">
+                Decryption
+            </div>
+        </div>    
+
+        <div class="area" id="area">
+            <!-- <input type="text" name="data" id="data"  placeholder="enter the message..."> -->
+            <textarea name="data" id="data" required></textarea>
+
+            <div class="password">
+                Enter the key:
+                <input type="password" name="passwd" id="passwd">
+            </div>
+
+            <button id="btn" class="btn">Encryt</button>
+
+            <textarea name="encrypted-text" class="encrypted-text" id="encrypted-text"  placeholder="The Decrypted Message" readonly></textarea>
+            <img id="copy" class="copy" src="./image/copy.png" alt="copy text" onclick="copyText()">
+        </div>
+
+        <div class="area" id="area2">
+            <!-- <input type="text" name="data" id="data"  placeholder="enter the message..."> -->
+            <textarea name="data2" id="data2" required></textarea>
+
+            <div class="password">
+                Enter the key:
+                <input type="password" name="passwd2" id="passwd2">
+            </div>
+
+            <button id="btn2" class="btn2">Decryt</button>
+
+            <textarea name="decrypted-text" class="decrypted-text" id="decrypted-text"  placeholder="Secret Message" readonly></textarea>
+            <img id="copy" class="copy" src="./image/copy.png" alt="copy text" onclick="copyText2()">
+        </div>
+
+    </div>
+    
+
+    <script src="./cipher.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>

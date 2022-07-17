@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: radial-gradient(circle, rgb(41, 0, 54) 0%, rgba(8,0,13,1) 100%); */
+    background: radial-gradient(circle at 50% 13%,rgb(35, 0, 73), rgba(0, 1, 11, 1))
+}
+
+.intro-container
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: -5;
+}
+
+.intro-container img {
+    height: 50%;
+    filter: blur(10px);
+    filter: brightness(0.5);
+}
+
+
+/**Title***/
+.title{
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.titlet{
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+}
+
+.title img {
+    padding-left: 20px;
+    height: 70px;
+}
+
+
+/***Container***/
+
+/*Tab Wrapper*/
+
+.container {
+    width: 950px;
+    height: 550px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.tab-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 950px;
+    height: 70px;
+    /* background-color: rgb(47, 31, 10); */
+    color: white;
+    font-size: 20px;
+}
+
+.tab-wrapper img {
+    height: 40px;
+}
+
+#encryption-tab, #decryption-tab{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42, 108, 170);
+    width: 250px;
+    height: 80px;
+    border-radius: 20px;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+#encryption-tab:hover, #decryption-tab:hover {
+    background-color: rgb(1, 44, 84);
+    transform: scale(1.25);
+}
+#encryption-tab.active, #decryption-tab.active {
+    background-color: rgb(1, 44, 84);
+    transform: scale(1.25);
+}
+
+/****Area***/
+#area, #area2{
+    width: 900px;
+    height: 500px;
+    background: linear-gradient(to top left, rgba(240, 248, 255, 0.05), rgba(240, 248, 255, 0.4));
+    border: solid 0.1px rgba(255, 255, 255, 0.167);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    z-index: 1;
+    border-radius: 20px;
+    font-size: 20px;
+    display: none;
+    transition: all 0.4s;
+}
+#area2{
+    background: linear-gradient(to top right, rgba(240, 248, 255, 0.05), rgba(240, 248, 255, 0.4));
+    transition: all 0.4s;
+}
+
+#data, #data2{
+    margin-top: 25px;
+    height: 120px;
+    width: 750px;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    border-radius: 10px;
+    resize: none;
+}
+.password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+#passwd , #passwd2{
+    height: 30px;
+    width: 200px;
+    letter-spacing: 5px;  
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+#btn, #btn2{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: solid 1.1px rgba(255, 255, 255, 0.4);
+    color: rgb(216, 216, 216);
+}
+#btn{
+    background-color: rgba(2, 106, 2, 0.4);
+}
+#btn2{
+    background-color: rgba(74, 19, 0, 0.4);
+}
+
+#encrypted-text, #decrypted-text {
+    height: 200px;
+    width: 750px;
+    text-align: center;
+    font-size: 15px;
+    background-color: rgba(209, 255, 255, 0.973);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: monospace;
+    letter-spacing: 0.5px;
+    resize: none;
+    padding: 15px;
+}
+
+.copy{
+    cursor: pointer;
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    height: 30px;
+}
